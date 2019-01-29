@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_medium_2"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RadioGroup
+                android:id="@+id/rg_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2">
+
+            <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Sedentary"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+            <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Lightly Active"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+            <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Moderately Active"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+            <RadioButton
+                    android:id="@+id/rb_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Very Active"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+            <RadioButton
+                    android:id="@+id/rb_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Extremely Active"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+        </RadioGroup>
+
+        <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/primaryColor"
+                android:clickable="true"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white_full"
+                android:textSize="@dimen/text_regular"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

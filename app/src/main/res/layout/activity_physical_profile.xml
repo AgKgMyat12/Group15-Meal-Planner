@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primaryTextColor"
+                android:paddingTop="@dimen/margin_medium"/>
+
+        <EditText
+                android:id="@+id/et_feet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Feet"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_regular"
+                android:inputType="number"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_height"
+                android:layout_marginRight="@dimen/margin_right_1"/>
+
+        <EditText
+                android:id="@+id/et_inches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Inches"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_regular"
+                android:layout_alignTop="@id/tv_height"
+                android:layout_alignParentRight="true"
+                android:inputType="number"/>
+
+        <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primaryTextColor"
+                android:paddingTop="@dimen/margin_medium"
+                android:layout_below="@id/tv_height"
+                android:layout_marginTop="@dimen/margin_medium_3"/>
+
+        <TextView
+                android:id="@+id/tv_lbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lbs"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_alignTop="@id/et_weight"
+                android:paddingTop="@dimen/margin_medium"/>
+
+        <EditText
+                android:id="@+id/et_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter your weight"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/primaryTextColor"
+                android:inputType="number"
+                android:layout_toLeftOf="@id/tv_lbs"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_alignTop="@id/tv_weight"/>
+
+
+        <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primaryTextColor"
+                android:paddingTop="@dimen/margin_medium"
+                android:layout_below="@id/tv_weight"
+                android:layout_marginTop="@dimen/margin_medium_3"/>
+
+        <EditText
+                android:id="@+id/et_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter your age"
+                android:inputType="number"
+                android:textColor="@color/primaryTextColor"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_age"
+                android:textSize="@dimen/text_regular"/>
+
+        <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primaryTextColor"
+                android:paddingTop="@dimen/margin_medium"
+                android:layout_below="@id/tv_age"
+                android:layout_marginTop="@dimen/margin_medium_3"/>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_gender"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_marginRight="@dimen/margin_medium_2"/>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+
+        </RadioGroup>
+
+        <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/primaryColor"
+                android:clickable="true"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white_full"
+                android:textSize="@dimen/text_regular"/>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

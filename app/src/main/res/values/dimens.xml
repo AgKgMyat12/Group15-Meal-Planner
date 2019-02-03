@@ -40,4 +40,8 @@
     <dimen name="margin_right_1">70dp</dimen>
     <dimen name="margin_top_1">70dp</dimen>
     <dimen name="description">15sp</dimen>
+    <dimen name="margin_top_2">10dp</dimen>
+    <dimen name="bg_remove_side">-4dp</dimen>
+    <dimen name="calories_margin_top">18sp</dimen>
+    <dimen name="text_day">20sp</dimen>
 </resources>

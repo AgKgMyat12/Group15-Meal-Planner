@@ -3,7 +3,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.DailyActiveActivity">
 
     <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -26,7 +28,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RadioGroup
-                android:id="@+id/rg_goal"
+                android:id="@+id/rg_active"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -101,12 +103,12 @@
         </RadioGroup>
 
         <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_done"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@color/primaryColor"
                 android:clickable="true"
-                android:text="Next"
+                android:text="Done"
                 android:textAllCaps="true"
                 android:layout_alignParentBottom="true"
                 android:textColor="@color/white_full"

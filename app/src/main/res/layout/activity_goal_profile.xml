@@ -3,7 +3,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.GoalProfileActivity">
 
     <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -27,23 +29,13 @@
             android:focusableInTouchMode="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-                android:id="@+id/tv_your_goal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Your Goal"
-                android:textSize="@dimen/description"
-                android:layout_marginRight="@dimen/margin_medium_2"
-                android:layout_marginLeft="@dimen/margin_medium_2"
-                android:layout_marginTop="@dimen/margin_medium_2"/>
 
         <RadioGroup
                 android:id="@+id/rg_goal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_your_goal"
                 android:orientation="vertical"
-                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_xlarge"
                 android:layout_marginRight="@dimen/margin_medium_2"
                 android:layout_marginLeft="@dimen/margin_medium_2">
 
@@ -54,6 +46,19 @@
                     android:button="@null"
                     android:clickable="true"
                     android:text="Weight Loss"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/primaryTextColor"
+                    android:background="@drawable/bg_radio_button_grey"/>
+
+            <RadioButton
+                    android:id="@+id/rb_maintain"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:text="Maintain"
+                    android:layout_marginTop="@dimen/margin_medium_2"
                     android:gravity="center"
                     android:textSize="@dimen/text_regular_2x"
                     android:textColor="@color/primaryTextColor"
@@ -74,56 +79,8 @@
 
         </RadioGroup>
 
-        <TextView
-                android:id="@+id/tv_your_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Time to achieve your goal"
-                android:textSize="@dimen/description"
-                android:layout_below="@id/rg_goal"
-                android:layout_marginRight="@dimen/margin_medium_2"
-                android:layout_marginLeft="@dimen/margin_medium_2"
-                android:layout_marginTop="@dimen/margin_top_1"/>
-
-        <TextView
-                android:id="@+id/tv_weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Time"
-                android:textSize="@dimen/text_regular_2x"
-                android:textColor="@color/primaryTextColor"
-                android:layout_below="@id/tv_your_time"
-                android:paddingTop="@dimen/margin_medium"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginLeft="@dimen/margin_medium_2"/>
-
-        <TextView
-                android:id="@+id/tv_month"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="month(s)"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/text_regular_2x"
-                android:layout_alignTop="@id/et_weight"
-                android:paddingTop="@dimen/margin_medium"
-                android:layout_marginRight="@dimen/margin_medium_2"/>
-
-        <EditText
-                android:id="@+id/et_weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Enter time"
-                android:textSize="@dimen/text_regular"
-                android:textColor="@color/primaryTextColor"
-                android:inputType="number"
-                android:layout_toLeftOf="@id/tv_month"
-                android:layout_marginRight="@dimen/margin_small"
-                android:layout_alignTop="@id/tv_weight"/>
-
-
         <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_next"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@color/primaryColor"

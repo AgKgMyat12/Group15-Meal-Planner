@@ -3,6 +3,7 @@ package com.example.hp.mealplanner.activities
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.RadioButton
@@ -46,13 +47,27 @@ class GoalProfileActivity : AppCompatActivity() {
         }
 
         btn_next.setOnClickListener {
+            var id = rg_goal.checkedRadioButtonId
+            var checkedRadio = rg_goal.findViewById<View>(id) as RadioButton
+            var goal = checkedRadio.text.toString()
+            var goalnum = 0
+
+            when (goal) {
+                "Weight Loss" ->
+                     goalnum = 0
+                "Maintain" ->
+                     goalnum = 1
+                else ->
+                     goalnum = 2
+            }
+
             var intent = Intent(applicationContext, DailyActiveActivity::class.java)
             intent.putExtra("token", token)
             intent.putExtra("height", height)
             intent.putExtra("weight", weight)
             intent.putExtra("age", age)
             intent.putExtra("gender", gender)
-            intent.putExtra("goal", rg_goal.checkedRadioButtonId.toString())
+            intent.putExtra("goal", goalnum.toString())
             startActivity(intent)
         }
     }

@@ -7,6 +7,8 @@ import com.example.hp.mealplanner.data.vos.MealDishVO
 import kotlinx.android.synthetic.main.view_item_daily_meals.view.*
 
 class DailyMealsViewHolders(itemView : View) : BaseViewHolder<MealDishVO>(itemView) {
+
+
     override fun setData(data: MealDishVO) {
         mData = data
 
@@ -38,5 +40,6 @@ class DailyMealsViewHolders(itemView : View) : BaseViewHolder<MealDishVO>(itemVi
     override fun onClick(v: View?) {
 
     }
+
 
 }

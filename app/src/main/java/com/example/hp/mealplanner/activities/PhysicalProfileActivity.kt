@@ -25,11 +25,12 @@ class PhysicalProfileActivity : AppCompatActivity() {
 
             var height = et_inches.text.toString()
             var weight = et_weight.text.toString()
-            var age = et_weight.text.toString()
+            var age = et_age.text.toString()
             var gender = rg_gender.checkedRadioButtonId.toString()
 
             Log.e("height", height)
             Log.e("age", age)
+            Log.e("gender", gender)
 
             var intent = Intent(applicationContext, GoalProfileActivity::class.java)
             intent.putExtra("token", token)

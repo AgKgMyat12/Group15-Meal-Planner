@@ -8,17 +8,17 @@ import android.util.Log
 import com.example.hp.mealplanner.R
 import com.example.hp.mealplanner.data.model.MealPlannerModel
 import com.example.hp.mealplanner.dialogs.UnderDevelopementDialog
-import com.example.hp.mealplanner.events.DataEvent
 import com.example.hp.mealplanner.fragments.DailyMealsFragment
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
+import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val logoID = R.mipmap.food_fit_3
+        toolbar.setLogo(logoID)
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)

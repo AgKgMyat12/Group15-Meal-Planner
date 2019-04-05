@@ -39,6 +39,10 @@ class DailyActiveActivity : AppCompatActivity() {
         var gender = intent.getStringExtra("gender")
         var goal = intent.getStringExtra("goal")
 
+        Log.e("goal", goal)
+        Log.e("gender", gender)
+        Log.e("active", rg_active.checkedRadioButtonId.toString())
+
         rg_active.setOnCheckedChangeListener{ group, checkedId ->
             var greenBorder = R.drawable.bg_radio_button_green
             var greyBorder = R.drawable.bg_radio_button_grey
@@ -55,8 +59,34 @@ class DailyActiveActivity : AppCompatActivity() {
         }
 
         btn_done.setOnClickListener {
+            var id = rg_active.checkedRadioButtonId
+            var checkedRadio = rg_active.findViewById<View>(id) as RadioButton
+            var active = checkedRadio.text.toString()
+            var activenum = 0
+
+            if (active == "Sedentary")
+            {
+                activenum = 0
+            }
+            else if (active == "LightlyActive")
+            {
+                activenum = 1
+            }
+            else if (active == "Moderately Active")
+            {
+                activenum = 2
+            }
+            else if (active == "Very Active")
+            {
+                activenum = 3
+            }
+            else
+            {
+                activenum = 4
+            }
+
             MealPlannerModel.getInstance().createUserData(token, height.toInt(), weight.toInt(), age.toInt(),
-                gender.toInt(), goal.toInt(), rg_active.checkedRadioButtonId)
+                (gender.toInt())-1, goal.toInt(), activenum)
         }
 
     }

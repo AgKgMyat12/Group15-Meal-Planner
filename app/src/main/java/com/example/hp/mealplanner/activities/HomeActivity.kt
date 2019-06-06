@@ -8,7 +8,7 @@ import android.util.Log
 import com.example.hp.mealplanner.R
 import com.example.hp.mealplanner.data.model.MealPlannerModel
 import com.example.hp.mealplanner.dialogs.UnderDevelopementDialog
-import com.example.hp.mealplanner.fragments.DailyMealsFragment
+import com.example.hp.mealplanner.fragments.DailyFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val logoID = R.mipmap.food_fit_3
+        val logoID = R.mipmap.fit_food_white
         toolbar.setLogo(logoID)
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.item_meals -> {
-                val dailyMealsFragment = DailyMealsFragment()
+                val dailyMealsFragment = DailyFragment()
                 openFragment(dailyMealsFragment)
                 return@OnNavigationItemSelectedListener true
             }

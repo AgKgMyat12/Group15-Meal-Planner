@@ -64,25 +64,12 @@ class DailyActiveActivity : AppCompatActivity() {
             var active = checkedRadio.text.toString()
             var activenum = 0
 
-            if (active == "Sedentary")
-            {
-                activenum = 0
-            }
-            else if (active == "LightlyActive")
-            {
-                activenum = 1
-            }
-            else if (active == "Moderately Active")
-            {
-                activenum = 2
-            }
-            else if (active == "Very Active")
-            {
-                activenum = 3
-            }
-            else
-            {
-                activenum = 4
+            when (active) {
+                "Sedentary" -> activenum = 0
+                "LightlyActive" -> activenum = 1
+                "Moderately Active" -> activenum = 2
+                "Very Active" -> activenum = 3
+                else -> activenum = 4
             }
 
             MealPlannerModel.getInstance().createUserData(token, height.toInt(), weight.toInt(), age.toInt(),

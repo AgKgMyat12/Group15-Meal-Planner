@@ -44,7 +44,7 @@
                         android:background="@color/bg_color"
                         android:gravity="center_vertical"
                         android:paddingLeft="@dimen/margin_medium_2"
-                        android:text="User Details Info"
+                        android:text="Order info"
                         android:textColor="@color/black_full"
                         android:textSize="@dimen/text_regular_2x"/>
 
@@ -106,7 +106,7 @@
                             android:cursorVisible="false"
                             android:hint="Address"
                             android:inputType="text"
-                            android:maxLines="1"
+                            android:maxLines="2"
                             android:singleLine="true"
                             android:textSize="@dimen/text_regular_2x"/>
                 </android.support.design.widget.TextInputLayout>

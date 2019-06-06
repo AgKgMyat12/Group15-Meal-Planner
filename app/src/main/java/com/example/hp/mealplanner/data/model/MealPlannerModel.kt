@@ -1,16 +1,25 @@
 package com.example.hp.mealplanner.data.model
 
+import com.example.hp.mealplanner.data.vos.MealDishVO
+import com.example.hp.mealplanner.events.DataEvent
 import com.example.hp.mealplanner.network.MealPlannerDataAgent
 import com.example.hp.mealplanner.network.RetrofitDataAgent
 import com.google.gson.JsonObject
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
+import java.util.HashMap
 
 class MealPlannerModel {
+
+    private var mMealMap: HashMap<String, MealDishVO> = HashMap()
 
     var token: String = ""
     var mDataAgent: MealPlannerDataAgent? = null
 
     init {
         mDataAgent = RetrofitDataAgent.getInstance()
+        EventBus.getDefault().register(this)
     }
 
     companion object {
@@ -56,5 +65,15 @@ class MealPlannerModel {
 
     }
 
+    fun getDayID(dayID : String) : MealDishVO{
+        return mMealMap?.get(dayID)!!
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMealLoaded(mealLoadedEvent: DataEvent.OnSuccessLoadMeal){
+        for (meal : MealDishVO in mealLoadedEvent.dishes) {
+            mMealMap [meal.id] = meal
+        }
+    }
 
 }

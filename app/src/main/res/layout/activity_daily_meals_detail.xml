@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.DailyActiveActivity">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_full"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium"/>
+
+
+            <ImageView
+                    android:id="@+id/underline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_bottom_underline"
+                    android:layout_below="@id/tv_breakfast"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"/>
+
+            <ImageView
+                    android:id="@+id/iv_meal_pic_bf"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/chicken"
+                    android:layout_below="@id/underline1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium"/>
+
+            <TextView
+                    android:id="@+id/tv_meal_name_bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roasted Chicken"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_toRightOf="@id/iv_meal_pic_bf"
+                    android:layout_alignTop="@id/iv_meal_pic_bf"/>
+
+            <TextView
+                    android:id="@+id/tv_grams_bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 gram"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_meal_name_bf"
+                    android:layout_alignLeft="@id/tv_meal_name_bf"/>
+
+            <TextView
+                    android:id="@+id/tv_cal_bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300 calories"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_grams_bf"
+                    android:layout_alignLeft="@id/tv_meal_name_bf"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_title_bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients : "
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_below="@+id/iv_meal_pic_bf"
+                    android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ingredients"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@id/tv_ingredient_title_bf"
+                    android:layout_alignTop="@id/tv_ingredient_title_bf"/>
+
+            <TextView
+                    android:id="@+id/tv_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lunch"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:layout_below="@+id/tv_ingredient_bf"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_marginBottom="@dimen/margin_medium"/>
+
+
+            <ImageView
+                    android:id="@+id/underline2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_bottom_underline"
+                    android:layout_below="@id/tv_lunch"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"/>
+
+            <ImageView
+                    android:id="@+id/iv_meal_pic_lunch"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/chicken"
+                    android:layout_below="@id/underline2"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_medium_2"/>
+
+            <TextView
+                    android:id="@+id/tv_meal_name_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roasted Chicken"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_toRightOf="@id/iv_meal_pic_lunch"
+                    android:layout_alignTop="@id/iv_meal_pic_lunch"/>
+
+            <TextView
+                    android:id="@+id/tv_grams_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 gram"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_meal_name_lunch"
+                    android:layout_alignLeft="@id/tv_meal_name_lunch"/>
+
+            <TextView
+                    android:id="@+id/tv_cal_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300 calories"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_grams_lunch"
+                    android:layout_alignLeft="@id/tv_meal_name_lunch"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_title_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients : "
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_below="@+id/iv_meal_pic_lunch"
+                    android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ingredients"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@id/tv_ingredient_title_lunch"
+                    android:layout_alignTop="@id/tv_ingredient_title_lunch"/>
+
+
+            <TextView
+                    android:id="@+id/tv_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dinner"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:layout_below="@+id/tv_ingredient_lunch"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_marginBottom="@dimen/margin_medium"/>
+
+            <ImageView
+                    android:id="@+id/underline3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_bottom_underline"
+                    android:layout_below="@id/tv_dinner"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"/>
+
+            <ImageView
+                    android:id="@+id/iv_meal_pic_dinner"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/chicken"
+                    android:layout_below="@id/underline3"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_medium_2"/>
+
+            <TextView
+                    android:id="@+id/tv_meal_name_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roasted Chicken"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_toRightOf="@id/iv_meal_pic_dinner"
+                    android:layout_alignTop="@id/iv_meal_pic_dinner"/>
+
+            <TextView
+                    android:id="@+id/tv_grams_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 gram"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_meal_name_dinner"
+                    android:layout_alignLeft="@id/tv_meal_name_dinner"/>
+
+            <TextView
+                    android:id="@+id/tv_cal_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300 calories"
+                    android:textSize="@dimen/text_regular"
+                    android:layout_below="@id/tv_grams_dinner"
+                    android:layout_alignLeft="@id/tv_meal_name_dinner"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_title_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients : "
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_below="@+id/iv_meal_pic_dinner"
+                    android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <TextView
+                    android:id="@+id/tv_ingredient_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ingredients"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@id/tv_ingredient_title_dinner"
+                    android:layout_alignTop="@id/tv_ingredient_title_dinner"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/primaryColor"
+            android:clickable="true"
+            android:foreground="@drawable/ripple_grey">
+
+        <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="Order"
+                android:textAllCaps="true"
+                android:textColor="@color/white_full"
+                android:textSize="@dimen/text_regular_2x" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_next"
+                android:layout_toRightOf="@id/tv_next"
+                android:src="@drawable/ic_navigate_next_white_24dp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -10,15 +10,15 @@ import retrofit2.http.*
 
 interface MealPlannerApi {
 
-    @POST("/Account/Login")
+    @POST("/account/login")
     fun loginUser(@Body loginUser: JsonObject): Call<LoginUserResponse>
 
-    @POST("/Customer/GetMealPlan")
+    @POST("/customer/getmealplan")
     fun loadMeal(@Header("Authorization") token: String): Call<LoadMealsResponse>
 
-    @POST("/Account/Register")
+    @POST("/account/register")
     fun registerUser(@Body registerUser: JsonObject): Call<RegisterUserResponse>
 
-    @POST("/Customer/Create")
+    @POST("/customer/create")
     fun createUserData(@Header("Authorization") token: String, @Body createUserData : JsonObject) : Call<CreateUserResponse>
 }

@@ -23,7 +23,6 @@ class LogInActivity : AppCompatActivity() {
         tv_sign_up.setOnClickListener {
             var intent = Intent(applicationContext, SignUpActivity::class.java)
             startActivity(intent)
-
         }
 
         btn_login.setOnClickListener {

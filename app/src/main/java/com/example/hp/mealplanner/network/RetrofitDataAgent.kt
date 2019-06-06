@@ -40,7 +40,7 @@ class RetrofitDataAgent : MealPlannerDataAgent{
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://naingyeaung1998-001-site1.dtempurl.com")
+            .baseUrl("http://naingyeaung98-001-site1.itempurl.com")
             .addConverterFactory(GsonConverterFactory.create(Gson()))
             .client(okHttpClient)
             .build()

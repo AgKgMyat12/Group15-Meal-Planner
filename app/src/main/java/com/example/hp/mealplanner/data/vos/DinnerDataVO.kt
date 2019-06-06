@@ -15,4 +15,11 @@ class DinnerDataVO {
 
     @SerializedName("dinnerGram")
     var dinnerGram : Int = 0
+
+    @SerializedName("calories")
+    var calories : Int = 0
+
+    @SerializedName("ingredients")
+    var ingredients : String = ""
+
 }

@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">Food Fit</string>
+    <string name="app_name">Fit Food</string>
     <string name="action_settings">Settings</string>
 
     <string name="account_create">Don\'t have an account?</string>
     <string name="terms">By creating an account, I accept <b>Terms</b> &amp; <b>Conditions</b> of Fit Food.</string>
     <string name="under_development">We are currently developing this feature.</string>
+
+    <string name="ingredients">Chicken, Onions, Potato, Chicken, Onions, Potato, Chicken, Onions</string>
 </resources>

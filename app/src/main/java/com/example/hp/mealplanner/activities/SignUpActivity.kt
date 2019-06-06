@@ -3,7 +3,6 @@ package com.example.hp.mealplanner.activities
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.example.hp.mealplanner.R
 import com.example.hp.mealplanner.data.model.MealPlannerModel
 import com.example.hp.mealplanner.events.DataEvent

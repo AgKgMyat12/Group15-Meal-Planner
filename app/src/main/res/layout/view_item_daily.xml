@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_card_medium_2"
+        android:layout_marginRight="@dimen/margin_card_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_full">
+
+        <ImageView
+                android:id="@+id/iv_meal_bg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/meal_image_holder"/>
+
+        <TextView
+                android:id="@+id/tv_day_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day 1"
+                android:textAllCaps="true"
+                android:padding="@dimen/margin_medium"
+                android:background="@color/secondaryColor"
+                android:textSize="@dimen/text_day"
+                android:textColor="@color/white_full"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:layout_alignBottom="@id/iv_meal_bg"/>
+
+        <TextView
+                android:id="@+id/tv_num_of_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 meals included"
+                android:layout_below="@id/iv_meal_bg"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"/>
+
+        <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000 kyats"
+                android:textSize="@dimen/text_heading_1x"
+                android:layout_below="@id/tv_num_of_meal"
+                android:textColor="@color/black_full"
+                android:layout_marginLeft="@dimen/margin_medium"/>
+
+        <TextView
+                android:id="@+id/tv_total_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total 700 calories"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_below="@id/tv_price"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_price"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

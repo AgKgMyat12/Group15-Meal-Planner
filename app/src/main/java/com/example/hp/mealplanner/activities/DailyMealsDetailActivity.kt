@@ -41,9 +41,15 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         mTapDay = MealPlannerModel.getInstance().getDayID(id)
         bindMeal(mTapDay!!)
 
+        btn_order.setOnClickListener {
+            var intent = Intent(applicationContext, OrderFormActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun bindMeal(mTapDay: MealDishVO) {
+        toolbar.title = "Day "+ mTapDay!!.day
         Glide.with(applicationContext)
             .load(mTapDay.breakfastData!!.photo)
             .into(iv_meal_pic_bf)
@@ -51,7 +57,7 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_bf.text = mTapDay.breakfastData!!.name
         tv_grams_bf.text = mTapDay.breakfastData!!.breakfastGram.toString() + " grams"
         tv_cal_bf.text = mTapDay.breakfastData!!.calories.toString() + " calories"
-        tv_ingredient_bf.text = mTapDay.breakfastData!!.ingredients
+//        tv_ingredient_bf.text = mTapDay.breakfastData!!.ingredients
 
         Glide.with(applicationContext)
             .load(mTapDay.lunchData!!.photo)
@@ -60,7 +66,7 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_lunch.text = mTapDay.lunchData!!.name
         tv_grams_lunch.text = mTapDay.lunchData!!.lunchGram.toString() + " grams"
         tv_cal_lunch.text = mTapDay.lunchData!!.calories.toString() + " calories"
-        tv_ingredient_lunch.text = mTapDay.lunchData!!.ingredients
+//        tv_ingredient_lunch.text = mTapDay.lunchData!!.ingredients
 
         Glide.with(applicationContext)
             .load(mTapDay.dinnerData!!.photo)
@@ -69,6 +75,6 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_dinner.text = mTapDay.dinnerData!!.name
         tv_grams_dinner.text = mTapDay.dinnerData!!.dinnerGram.toString()+ " grams"
         tv_cal_dinner.text = mTapDay.dinnerData!!.calories.toString() + " calories"
-        tv_ingredient_dinner.text = mTapDay.dinnerData!!.ingredients
+//        tv_ingredient_dinner.text = mTapDay.dinnerData!!.ingredients
     }
 }

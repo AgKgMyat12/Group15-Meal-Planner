@@ -7,4 +7,6 @@
     <string name="under_development">We are currently developing this feature.</string>
 
     <string name="ingredients">Chicken, Onions, Potato, Chicken, Onions, Potato, Chicken, Onions</string>
+
+    <string name="confirming">By clicking on CONFIRMATION RESERVATION, I agree with the terms of use and privacy policy.</string>
 </resources>

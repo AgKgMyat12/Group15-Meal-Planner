@@ -30,7 +30,7 @@
         <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_card_medium_2">
+                android:layout_margin="@dimen/margin_medium_2">
 
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                         android:background="@color/bg_color"
                         android:gravity="center_vertical"
                         android:paddingLeft="@dimen/margin_medium_2"
-                        android:text="Order info"
+                        android:text="Customer Info"
                         android:textColor="@color/black_full"
                         android:textSize="@dimen/text_regular_2x"/>
 
@@ -114,6 +114,20 @@
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:text="@string/confirming"
+                android:textAlignment="center"
+                android:textColor="@color/black_full"
+                android:textSize="@dimen/text_small" />
+
         <Button
                 android:id="@+id/btn_order"
                 android:layout_width="match_parent"
@@ -121,8 +135,8 @@
                 android:background="@color/primaryColor"
                 android:clickable="true"
                 android:layout_below="@id/input_layout_password"
-                android:layout_margin="@dimen/margin_card_medium_2"
-                android:text="Order"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:text="Confirm Order"
                 android:textAllCaps="true"
                 android:textColor="@color/white_full"
                 android:textSize="@dimen/text_regular"/>

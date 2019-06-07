@@ -10,6 +10,7 @@ import com.example.hp.mealplanner.R
 import com.example.hp.mealplanner.activities.DailyMealsDetailActivity
 import com.example.hp.mealplanner.adapters.DailyAdapter
 import com.example.hp.mealplanner.controller.DayItemController
+import com.example.hp.mealplanner.data.model.MealPlannerModel
 import com.example.hp.mealplanner.data.vos.MealDishVO
 import com.example.hp.mealplanner.events.DataEvent
 import kotlinx.android.synthetic.main.fragment_daily_meals.view.*
@@ -30,8 +31,11 @@ class DailyFragment : Fragment(), DayItemController {
         mDailyAdapter = DailyAdapter(this.context!!, this)
         view.srv_daily_meals.adapter = mDailyAdapter
         var linearLayoutManger: LinearLayoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         view.srv_daily_meals.layoutManager = linearLayoutManger
+
+        mDishList = MealPlannerModel.getInstance().getMeal()
+        mDailyAdapter!!.setNewData(mDishList as MutableList<MealDishVO>)
 
         return view
     }

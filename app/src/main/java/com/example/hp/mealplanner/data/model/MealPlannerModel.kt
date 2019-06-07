@@ -69,6 +69,10 @@ class MealPlannerModel {
         return mMealMap?.get(dayID)!!
     }
 
+    fun getMeal() : List<MealDishVO>{
+        return ArrayList<MealDishVO>(mMealMap.values)
+    }
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMealLoaded(mealLoadedEvent: DataEvent.OnSuccessLoadMeal){
         for (meal : MealDishVO in mealLoadedEvent.dishes) {

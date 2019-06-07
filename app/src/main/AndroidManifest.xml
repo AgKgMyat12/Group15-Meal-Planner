@@ -56,6 +56,18 @@
                   android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
+        <activity android:name=".activities.DailyMealsDetailActivity"
+                  android:label="MealPlanner"
+                  android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".activities.OrderFormActivity"
+                  android:label="MealPlanner"
+                  android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
     </application>
 
 </manifest>

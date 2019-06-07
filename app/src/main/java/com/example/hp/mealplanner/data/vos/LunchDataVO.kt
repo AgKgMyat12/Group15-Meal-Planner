@@ -19,6 +19,6 @@ class LunchDataVO {
     @SerializedName("calories")
     var calories : Int = 0
 
-    @SerializedName("ingredients")
-    var ingredients : String = ""
+//    @SerializedName("ingredients")
+//    var ingredients : String = ""
 }

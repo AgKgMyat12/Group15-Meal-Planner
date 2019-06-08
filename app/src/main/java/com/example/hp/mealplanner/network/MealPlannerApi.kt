@@ -1,9 +1,6 @@
 package com.example.hp.mealplanner.network
 
-import com.example.hp.mealplanner.network.responses.CreateUserResponse
-import com.example.hp.mealplanner.network.responses.LoadMealsResponse
-import com.example.hp.mealplanner.network.responses.LoginUserResponse
-import com.example.hp.mealplanner.network.responses.RegisterUserResponse
+import com.example.hp.mealplanner.network.responses.*
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.*
@@ -21,4 +18,7 @@ interface MealPlannerApi {
 
     @POST("/customer/create")
     fun createUserData(@Header("Authorization") token: String, @Body createUserData : JsonObject) : Call<CreateUserResponse>
+
+    @POST("/order/create")
+    fun createOrder(@Header("Authorization") token: String, @Body createOrder : JsonObject) : Call<CreateOrderResponse>
 }

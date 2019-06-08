@@ -1,5 +1,6 @@
 package com.example.hp.mealplanner.activities
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -10,8 +11,14 @@ import com.example.hp.mealplanner.data.model.MealPlannerModel
 import com.example.hp.mealplanner.dialogs.UnderDevelopementDialog
 import com.example.hp.mealplanner.fragments.DailyFragment
 import kotlinx.android.synthetic.main.activity_home.*
+import android.content.Intent
+import android.content.SharedPreferences
+import android.preference.PreferenceManager
+
 
 class HomeActivity : AppCompatActivity() {
+
+    var token : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +32,12 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.selectedItemId = R.id.item_meals
 
 
-        var token = intent.getStringExtra("token")
-        Log.e("token", token)
+        token = intent.getStringExtra("token")
+
+        val preferences = PreferenceManager
+            .getDefaultSharedPreferences(applicationContext)
+        preferences.edit().putString("token", token).apply()
+
         MealPlannerModel.getInstance().loadMeals(token)
     }
 

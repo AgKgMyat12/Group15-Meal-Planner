@@ -2,10 +2,7 @@ package com.example.hp.mealplanner.network
 
 import com.example.hp.mealplanner.events.DataEvent
 import com.example.hp.mealplanner.events.ErrorEvent
-import com.example.hp.mealplanner.network.responses.CreateUserResponse
-import com.example.hp.mealplanner.network.responses.LoadMealsResponse
-import com.example.hp.mealplanner.network.responses.LoginUserResponse
-import com.example.hp.mealplanner.network.responses.RegisterUserResponse
+import com.example.hp.mealplanner.network.responses.*
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import okhttp3.OkHttpClient
@@ -119,6 +116,26 @@ class RetrofitDataAgent : MealPlannerDataAgent{
                 val createUserResponse : CreateUserResponse? = response.body()
                 if (createUserResponse!!.message == "success" ){
                     EventBus.getDefault().post(DataEvent.OnSuccessCreateUserDataEvent(createUserResponse.message))
+                }
+                else{
+                    EventBus.getDefault().post(DataEvent.EmptyLoadedEvent("No Token"))
+                }
+            }
+
+        })
+    }
+
+    override fun createOrder(jsonObject: JsonObject, token: String) {
+        val createOrder : Call<CreateOrderResponse> = mMealPlannerApi.createOrder("Bearer $token", jsonObject)
+        createOrder.enqueue(object : Callback<CreateOrderResponse> {
+            override fun onFailure(call: Call<CreateOrderResponse>, t: Throwable) {
+                EventBus.getDefault().post(ErrorEvent.ApiErrorEvent(t))
+            }
+
+            override fun onResponse(call: Call<CreateOrderResponse>, response: Response<CreateOrderResponse>) {
+                val createOrderResponse : CreateOrderResponse? = response.body()
+                if (createOrderResponse!!.message == "success" ){
+                    EventBus.getDefault().post(DataEvent.OnSuccessOrder(createOrderResponse.message))
                 }
                 else{
                     EventBus.getDefault().post(DataEvent.EmptyLoadedEvent("No Token"))

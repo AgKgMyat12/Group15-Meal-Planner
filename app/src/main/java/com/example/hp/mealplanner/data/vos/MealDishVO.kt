@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 class MealDishVO {
 
+    @SerializedName("day")
+    var day : String = ""
+
     @SerializedName("id")
     var id : String =  ""
 
@@ -16,9 +19,6 @@ class MealDishVO {
     @SerializedName("dinnerData")
     var dinnerData : DinnerDataVO? = null
 
-    @SerializedName("day")
-    var day : String = ""
-
     @SerializedName("numOfMeals")
     var numOfMeals : String = ""
 
@@ -26,7 +26,7 @@ class MealDishVO {
     var totalCalories : Int = 0
 
     @SerializedName("price")
-    var price : String = ""
+    var price : Int = 0
 
     @SerializedName("picture")
     var picture : String = ""

@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import com.example.hp.mealplanner.viewholders.BaseViewHolder
 import java.util.ArrayList
 
-abstract class BaseRecyclerAdapter<T, W>(context: Context) : RecyclerView.Adapter<BaseViewHolder<W>>() {
+abstract class BaseAdapter<T, W : Any>(context: Context) : RecyclerView.Adapter<BaseViewHolder<W>>() {
 
-    private var mData: MutableList<W>? = null
+    protected var mData: MutableList<W>? = null
     protected var mLayoutInflator: LayoutInflater
 
     val items: List<W>
@@ -42,7 +42,6 @@ abstract class BaseRecyclerAdapter<T, W>(context: Context) : RecyclerView.Adapte
 
     fun getItemAt(position: Int): W? {
         return if (position < mData!!.size - 1) mData!![position] else null
-
     }
 
     fun removeData(data: W) {

@@ -9,4 +9,5 @@ class DataEvent {
     class OnSuccessRegisterEvent(val token: String)
     class OnSuccessCreateUserDataEvent(val message : String)
     class EmptyLoadedEvent (val errorMsg:String)
+    class OnSuccessOrder(val message : String)
 }

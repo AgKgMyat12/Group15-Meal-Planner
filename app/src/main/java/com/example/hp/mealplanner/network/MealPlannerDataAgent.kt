@@ -8,4 +8,5 @@ interface MealPlannerDataAgent {
     fun loadMeal(token: String)
     fun registerUser(jsonObject: JsonObject)
     fun createUserData(jsonObject: JsonObject, token: String)
+    fun createOrder(jsonObject: JsonObject, token: String)
 }

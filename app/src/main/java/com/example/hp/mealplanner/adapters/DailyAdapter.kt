@@ -7,7 +7,7 @@ import com.example.hp.mealplanner.controller.DayItemController
 import com.example.hp.mealplanner.data.vos.MealDishVO
 import com.example.hp.mealplanner.viewholders.DailyViewHolder
 
-class DailyAdapter(context : Context, dayItemController: DayItemController) : BaseRecyclerAdapter<DailyViewHolder, MealDishVO>(context) {
+class DailyAdapter(context : Context, dayItemController: DayItemController) : BaseAdapter<DailyViewHolder, MealDishVO>(context) {
 
     private var mDayItemController : DayItemController? = null
 
@@ -19,4 +19,5 @@ class DailyAdapter(context : Context, dayItemController: DayItemController) : Ba
         val restaurantItemView = mLayoutInflator?.inflate(R.layout.view_item_daily, parent, false)
         return DailyViewHolder(restaurantItemView!!, mDayItemController!!)
     }
+
 }

@@ -45,7 +45,7 @@
                     android:textStyle="bold"
                     android:layout_marginLeft="@dimen/margin_medium_2"
                     android:layout_marginRight="@dimen/margin_medium_2"
-                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium_2"
                     android:layout_marginBottom="@dimen/margin_medium"/>
 
 
@@ -265,8 +265,7 @@
                     android:text="Ingredients : "
                     android:textSize="@dimen/text_regular"
                     android:layout_below="@+id/iv_meal_pic_dinner"
-                    android:layout_marginLeft="@dimen/margin_medium_2"
-                    android:layout_marginBottom="28dp"/>
+                    android:layout_marginLeft="@dimen/margin_medium_2"/>
 
             <TextView
                     android:id="@+id/tv_ingredient_dinner"
@@ -275,6 +274,7 @@
                     android:text="@string/ingredients"
                     android:textSize="@dimen/text_regular"
                     android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginBottom="20dp"
                     android:layout_toRightOf="@id/tv_ingredient_title_dinner"
                     android:layout_alignTop="@id/tv_ingredient_title_dinner"/>
 

@@ -25,7 +25,7 @@ class DailyViewHolder(itemView : View, dayItemController: DayItemController) : B
             .into(itemView.iv_meal_bg)
 
         itemView.tv_num_of_meal.text = data.numOfMeals.toString()+ " meals included"
-        itemView.tv_price.text = data.price + " kyats"
+        itemView.tv_price.text = data.price.toString() + " kyats"
         itemView.tv_total_cal.text = "Total "+ data.totalCalories.toString()+ " calories"
 
     }

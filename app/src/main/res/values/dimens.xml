@@ -35,7 +35,7 @@
 
     <!-- App specific values -->
     <dimen name="margin_top_login">150dp</dimen>
-    <dimen name="margin_top_signup">110dp</dimen>
+    <dimen name="margin_top_signup">90dp</dimen>
     <dimen name="margin_left_1">60dp</dimen>
     <dimen name="margin_right_1">70dp</dimen>
     <dimen name="margin_top_1">70dp</dimen>

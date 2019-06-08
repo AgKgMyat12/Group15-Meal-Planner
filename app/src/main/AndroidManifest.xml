@@ -3,14 +3,14 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.hp.mealplanner">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
             android:allowBackup="true"
-            android:icon="@mipmap/fit_food_green"
+            android:icon="@mipmap/app_icon"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/fit_food_green"
+            android:roundIcon="@mipmap/app_icon"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
@@ -32,39 +32,45 @@
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity android:name=".activities.PhysicalProfileActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.PhysicalProfileActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
-        <activity android:name=".activities.GoalProfileActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.GoalProfileActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
-        <activity android:name=".activities.DailyActiveActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.DailyActiveActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
 
 
         </activity>
 
-        <activity android:name=".activities.HomeActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.HomeActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity android:name=".activities.DailyMealsDetailActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.DailyMealsDetailActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
-        <activity android:name=".activities.OrderFormActivity"
-                  android:label="MealPlanner"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".activities.OrderFormActivity"
+                android:label="MealPlanner"
+                android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 

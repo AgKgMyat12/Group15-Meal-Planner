@@ -5,6 +5,7 @@
     <string name="account_create">Don\'t have an account?</string>
     <string name="terms">By creating an account, I accept <b>Terms</b> &amp; <b>Conditions</b> of Fit Food.</string>
     <string name="under_development">We are currently developing this feature.</string>
+    <string name="order_successful">Your order is serving for you now. We will there in your meal time! Thank you so much.</string>
 
     <string name="ingredients">Chicken, Onions, Potato, Chicken, Onions, Potato, Chicken, Onions</string>
 

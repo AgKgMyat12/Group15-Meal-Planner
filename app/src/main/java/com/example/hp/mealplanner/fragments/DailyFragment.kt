@@ -35,7 +35,7 @@ class DailyFragment : Fragment(), DayItemController {
         view.srv_daily_meals.layoutManager = linearLayoutManger
 
         mDishList = MealPlannerModel.getInstance().getMeal()
-        mDailyAdapter!!.setNewData(mDishList as MutableList<MealDishVO>)
+        mDailyAdapter!!.appendNewData(mDishList)
 
         return view
     }

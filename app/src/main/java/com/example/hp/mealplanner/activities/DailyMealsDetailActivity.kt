@@ -14,6 +14,7 @@ class DailyMealsDetailActivity : AppCompatActivity() {
 
     private var mTapDay : MealDishVO? = null
     private var id : String = ""
+    private var mOrderFormActivity = OrderFormActivity()
 
     fun newIntent(context: Context, mealDishVO: MealDishVO) : Intent{
         var intent = Intent(context, DailyMealsDetailActivity::class.java)
@@ -42,8 +43,9 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         bindMeal(mTapDay!!)
 
         btn_order.setOnClickListener {
-            var intent = Intent(applicationContext, OrderFormActivity::class.java)
+            var intent = mOrderFormActivity.newIntent(applicationContext, mTapDay!!)
             startActivity(intent)
+
         }
 
     }
@@ -57,7 +59,7 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_bf.text = mTapDay.breakfastData!!.name
         tv_grams_bf.text = mTapDay.breakfastData!!.breakfastGram.toString() + " grams"
         tv_cal_bf.text = mTapDay.breakfastData!!.calories.toString() + " calories"
-//        tv_ingredient_bf.text = mTapDay.breakfastData!!.ingredients
+        tv_ingredient_bf.text = mTapDay.breakfastData!!.ingredients
 
         Glide.with(applicationContext)
             .load(mTapDay.lunchData!!.photo)
@@ -66,7 +68,7 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_lunch.text = mTapDay.lunchData!!.name
         tv_grams_lunch.text = mTapDay.lunchData!!.lunchGram.toString() + " grams"
         tv_cal_lunch.text = mTapDay.lunchData!!.calories.toString() + " calories"
-//        tv_ingredient_lunch.text = mTapDay.lunchData!!.ingredients
+        tv_ingredient_lunch.text = mTapDay.lunchData!!.ingredients
 
         Glide.with(applicationContext)
             .load(mTapDay.dinnerData!!.photo)
@@ -75,6 +77,6 @@ class DailyMealsDetailActivity : AppCompatActivity() {
         tv_meal_name_dinner.text = mTapDay.dinnerData!!.name
         tv_grams_dinner.text = mTapDay.dinnerData!!.dinnerGram.toString()+ " grams"
         tv_cal_dinner.text = mTapDay.dinnerData!!.calories.toString() + " calories"
-//        tv_ingredient_dinner.text = mTapDay.dinnerData!!.ingredients
+        tv_ingredient_dinner.text = mTapDay.dinnerData!!.ingredients
     }
 }

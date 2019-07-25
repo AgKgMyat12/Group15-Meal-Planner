@@ -75,15 +75,15 @@ class MealPlannerModel {
 
         var orderDishes1 = JsonObject()
         orderDishes1.addProperty("DishID", bfID)
-        orderDishes1.addProperty("DishQtyInGram", 150)
+//        orderDishes1.addProperty("DishQtyInGram", 150)
 
         var orderDishes2 = JsonObject()
         orderDishes2.addProperty("DishID", lunchID)
-        orderDishes2.addProperty("DishQtyInGram", 150)
+//        orderDishes2.addProperty("DishQtyInGram", 150)
 
         var orderDishes3 = JsonObject()
         orderDishes3.addProperty("DishID", dinnerID)
-        orderDishes3.addProperty("DishQtyInGram", 150)
+//        orderDishes3.addProperty("DishQtyInGram", 150)
 
         var jsonArray = JsonArray()
         jsonArray.add(orderDishes1)
@@ -93,7 +93,7 @@ class MealPlannerModel {
         var orderDishesArray = JsonObject()
         orderDishesArray.add("OrderDishs", jsonArray)
 
-        jsonObject.add("OrderDishs",orderDishesArray)
+//        jsonObject.add("OrderDishs",orderDishesArray)
 
         mDataAgent?.createOrder(jsonObject, token)
     }

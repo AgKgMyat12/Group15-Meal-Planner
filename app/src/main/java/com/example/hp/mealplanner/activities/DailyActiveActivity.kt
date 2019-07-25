@@ -62,18 +62,17 @@ class DailyActiveActivity : AppCompatActivity() {
             var id = rg_active.checkedRadioButtonId
             var checkedRadio = rg_active.findViewById<View>(id) as RadioButton
             var active = checkedRadio.text.toString()
-            var activenum = 0
 
-            when (active) {
-                "Sedentary" -> activenum = 0
-                "LightlyActive" -> activenum = 1
-                "Moderately Active" -> activenum = 2
-                "Very Active" -> activenum = 3
-                else -> activenum = 4
+            var activeNum = when (active) {
+                "Sedentary" -> 0
+                "LightlyActive" -> 1
+                "Moderately Active" -> 2
+                "Very Active" -> 3
+                else -> 4
             }
 
             MealPlannerModel.getInstance().createUserData(token, height.toInt(), weight.toInt(), age.toInt(),
-                (gender.toInt())-1, goal.toInt(), activenum)
+                (gender.toInt())-1, goal.toInt(), activeNum)
         }
 
     }
